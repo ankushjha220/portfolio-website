@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankush Jha - Digital Marketing Strategist</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        emailjs.init('YOUR_PUBLIC_KEY'); // You'll need to get this from emailjs.com
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .skill-card, .exp-card, .case-study-card {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-card:hover, .exp-card:hover, .case-study-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">Ankush Jha</h1>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#case-studies" class="nav-link">Case Studies</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="md:hidden text-blue-600">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                <img src="profile.jpg" alt="Ankush Jha" class="w-64 h-64 rounded-full object-cover border-4 border-white shadow-xl">
+            </div>
+            <div class="md:w-2/3 text-center md:text-left md:pl-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Ankush Jha</h1>
+                <p class="text-xl mb-8">Digital Marketing Strategist — Helping businesses grow with high-performing Google Ads campaigns.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                    <a href="#case-studies" class="px-6 py-3 bg-white text-blue-600 font-semibold rounded-full shadow-lg hover:bg-blue-50 transition">View Case Studies</a>
+                    <a href="resume.pdf" class="px-6 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto text-center">
+                I am a Digital Marketing Strategist with hands-on experience managing 50+ Google Ads accounts across
+                e-commerce, SaaS, and services. I specialize in campaign strategy, smart bidding, and creating reporting
+                frameworks that turn data into measurable outcomes. My work focuses on improving ROAS, reducing wasted spend,
+                and scaling campaigns thoughtfully.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Skills & Tools</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-blue-600 mb-2">Google Ads</h3>
+                    <p class="text-sm text-gray-600">Search, Display, Video, Shopping</p>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-blue-600 mb-2">Campaign Strategy & Optimization</h3>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-blue-600 mb-2">Smart Bidding</h3>
+                    <p class="text-sm text-gray-600">Maximize Conversions/Value, Target ROAS</p>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-blue-600 mb-2">GTM, GA4 & Conversion Tracking</h3>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-blue-600 mb-2">Reporting & Dashboards</h3>
+                    <p class="text-sm text-gray-600">Excel, Looker Studio</p>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-blue-600 mb-2">A/B Testing & CRO</h3>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-blue-600 mb-2">Client Solutions</h3>
+                    <p class="text-sm text-gray-600">Stakeholder Management</p>
+                </div>
+                <div class="skill-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="font-semibold text-blue-600 mb-2">Policy Troubleshooting</h3>
+                    <p class="text-sm text-gray-600">Account Health</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <div class="space-y-8">
+                <div class="exp-card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-600">Digital Marketing Specialist</h3>
+                    <p class="text-gray-600 mt-2">WNS Global (Google Ads Project) — Gurgaon</p>
+                    <p class="text-gray-500 text-sm">Aug 2024 – Present</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Managed 50+ Google Ads accounts across e-commerce, SaaS and services.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Improved client ROAS by 30%+ through keyword expansion, bidding strategies and ad copy optimization.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Built reporting frameworks with Google Analytics and Excel to produce actionable insights.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="exp-card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-600">Associate – Google Ads</h3>
+                    <p class="text-gray-600 mt-2">Wipro Technologies Ltd — Pune</p>
+                    <p class="text-gray-500 text-sm">Sep 2023 – Jun 2024</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Advised advertisers on targeting and bidding strategies to boost ROI.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Troubleshot technical and policy issues with cross-functional teams.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Led client education sessions on Google Ads best practices.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="exp-card bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-blue-600">Programmer Analyst Intern & Trainee</h3>
+                    <p class="text-gray-600 mt-2">Cognizant — Pune</p>
+                    <p class="text-gray-500 text-sm">Jan 2022 – Jun 2023</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Streamlined reporting processes and collaborated with stakeholders on compliance tasks.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 mr-2">•</span>
+                            <span>Gained analytical and problem-solving skills applicable to campaign strategy.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Selected Case Studies</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="case-study-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-blue-500 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-3">Lead Generation — Service Industry</h3>
+                        <p class="text-gray-600 mb-4">Objective: Drive inbound calls through search ads. Implemented Maximise Conversions (Target CPA), optimized ad copy, and expanded keyword coverage.</p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>135 clicks → 16 conversions → 11.85% conversion rate</li>
+                            <li>Average CPC: CA$11.70</li>
+                            <li>Cost per conversion reduced to CA$98.69</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-study-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-search text-green-500 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-3">Responsive Search Campaign</h3>
+                        <p class="text-gray-600 mb-4">Objective: Improve conversion efficiency with broad responsive ad testing. Conducted RSA with 80% optimization score, added negative keywords.</p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>490 clicks → 45 conversions → 9.18% conversion rate</li>
+                            <li>Average CPC: CA$9.77</li>
+                            <li>Cost per conversion of CA$106.35 across campaigns</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="case-study-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-calendar-alt text-purple-500 text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-600 mb-3">Seasonal Campaign</h3>
+                        <p class="text-gray-600 mb-4">Objective: Launch seasonal/assistance-related program with limited budget. Campaign tested with low volume; insights fed into broader campaigns.</p>
+                        <ul class="text-sm text-gray-700 space-y-1">
+                            <li>Low-volume test provided learnings for future optimizations</li>
+                            <li>Optimization insights redirected to high-performing campaigns</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Let's Work Together</h2>
+            <p class="text-lg text-gray-700 text-center mb-10 max-w-2xl mx-auto">
+                I'm available for freelance projects, contract roles, and full-time opportunities.
+            </p>
+            <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+                <form id="contact-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 mb-2">Name</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Send Message</button>
+                </form>
+                <div class="mt-8 text-center">
+                    <p class="text-gray-600 mb-4">Or contact me directly at:</p>
+                    <a href="mailto:ankushofficial21120@gmail.com" class="text-blue-600 font-semibold hover:underline">ankushofficial21120@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p>© <span id="current-year"></span> Ankush Jha — Digital Marketing Strategist</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="text-white hover:text-blue-300 transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                <a href="#" class="text-white hover:text-blue-300 transition"><i class="fab fa-twitter text-xl"></i></a>
+                <a href="#" class="text-white hover:text-blue-300 transition"><i class="fab fa-instagram text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Simple form submission handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+        
+        // Mobile menu toggle (simplified version)
+        document.querySelector('button').addEventListener('click', function() {
+            alert('Mobile menu would open here. Add your navigation links for mobile view.');
+        });
+    </script>
+</body>
+</html>
